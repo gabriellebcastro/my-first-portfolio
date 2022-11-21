@@ -1,62 +1,411 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Gabrielle Castro</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico" />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+    crossorigin="anonymous"
+    />
+    <script src="js/main.js" async></script>
+    <title>Portfolio - Gabrielle Castro</title>
 </head>
-<body>
-    <!--Barra de Navegação-->
-	<section>		
-        <nav>
-            <a href="#" class="logo">Gabrielle Castro</a>
+<body id="home">
+    <header id="hero">
+        <!--Barra de Navegação-->
+        <nav id="navbar-scroll" class="navbar">
 
-            <ul> 
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/aboutme.html">Sobre mim</a></li>
-                <li><a href="pages/formacao.html">Formação</a></li>
-                <li><a href="pages/atuacao.html">Atuação profissional</a></li>
-                <li><a href="pages/portfolio.html">Portfólio</a></li>
-                <li><a href="pages/contact.html">Contato</a></li>
-                <li><a href="pages/tecnologia.html">Tecnologia</a></li>
+          <h1 class="logo">
+            <a href="#home"><img src="./img/logo_portfolio.png" alt="Logo"/></a>
+          </h1>
+
+          <div id="menu">
+            <ul class="nav-menu">
+              <li class="nav-items">
+                <a href="#about" class="nav-link"><i class="nav-icon fas fa-user"></i>Sobre mim</a>
+              </li>
+
+              <li class="nav-items">
+                <a href="#studies" class="nav-link"><i class="nav-icon fas fa-file"></i>Formação</a>
+              </li>
+
+              <li class="nav-items">
+                <a href="#works" class="nav-link"><i class="nav-icon fas fa-paperclip"></i>Experiência</a>
+              </li>
+
+              <li class="nav-items">
+                <a href="#projects" class="nav-link"><i class="nav-icon fas fa-code"></i>Portfólio</a>
+              </li>
+
+              <li class="nav-items">
+                <a href="#contact" class="nav-link"><i class="nav-icon fas fa-address-book"></i>Contato</a>
+              </li>
+
+              <li class="nav-items">
+                <a href="#contact" class="nav-link"><i class="nav-icon fas fa-rss"></i>Tecnologia</a>
+              </li>
+  
+              <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                  <input type="checkbox" id="checkbox" />
+                  <div class="slider round"></div>
+                </label>
+              </div>
             </ul>
-        </nav>
 
-        <!--Texto Inicial-->
-        <div class="conteudo-texto">
-            <div class ="conteudo-bv"><p>👋 Saudações!</p></div>
-            <p>Gabrielle Castro</p>
-            <p>Estudante de Ciência da Computação <br> & Dev. Full Stack Junior.</p>
-            <a href="http://github.com/gabriellebcastro" target="_blank"><button class="btn1"><img src="img/github.png"></button></a>
-            <a href="https://www.linkedin.com/in/gabriellebcastro/" target="_blank"><button class="btn2"><img src="img/linkedin.png"></button></a>
-            <a href="https://www.behance.net/gabriellebcastro" target="_blank"><button class="btn3"><img src="img/behance.png"></button></a>
-        </div>
+        <!--Verificar-->
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </div>
+        </nav>   
 
-        <!--Imagem-->
-        <div>  
-             <img src="img/perfil.png" class="imgbg" alt="imgbg">
-        </div>
+        <!--Texto Home-->
+        <section class="content container">
+            <div class="content-text">
+              <h1>Saudações! 👋<span class="underline"></span></h1>
+              <h2 class="text-secondary">Gabrielle Castro</h2>
+              <p>Estudante de Ciência da Computação<br>& Dev. Full Stack Junior.</p>
+              <p></p>
 
-        <!--Botões Currículo e whatsapp-->
+              <!--Botões Redes Sociais-->
+              <section class="icons-container">
+                <div class="container">
+                  <div class="social icons">
+                    <a
+                      href="http://github.com/gabriellebcastro"
+                      title="Github"
+                      target="_blank"
+                      class="fab fa-github"
+                    ></a>
+
+                    <a
+                      href="https://www.linkedin.com/in/gabriellebcastro/"
+                      title="Linkedin"
+                      target="_blank"
+                      class="fab fa-linkedin"
+                    ></a>
+
+                    <a
+                      href="https://www.behance.net/gabriellebcastro"
+                      title="Codepen"
+                      target="_blank"
+                      class="fab fa-behance"
+                    ></a>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <!--Imagem Home-->
+            <div class="content-image">
+              <div class="overlay-icons"></div>
+              <img src="img/perfil.png" alt="Avatar da Gabrielle"/>
+            </div>
+        </section>
+
+        <!--Botões Currículo e Whatsapp-->
         <div class="botoes-cv">
             <a href="https://drive.google.com/file/d/1cS6-dItbgdcb5VY5mQHwuTRgLmOOa3fp/view?usp=sharing" target="_blank">
-                <button class="button-cv">Baixar CV</button>
+                <button class="button-cv">Baixar CV <i class="nav-icon fas fa-arrow-down"></i></button>
             </a>
 
             <a href="https://wa.me/5593991388285?text=Ol%C3%A1%20Gabrielle%2C%20peguei%20seu%20contato%20no%20seu%20portf%C3%B3lio.%20Tudo%20bem%3F" target="_blank">
-                <button class="button-whatsapp">Vamos conversar!</button>
+                <button class="btn"><i class="nav-icon fab fa-whatsapp"></i> Vamos conversar!</button>
             </a>
         </div>
-    </section>
+    </header>
+
+    <main>
+        <!-- Sobre mim -->
+        <section id="about">
+          <div class="bio container">
+            <h2 class="head-text">
+                SOBRE MIM<span class="underline underline-primary"></span>
+            </h2>  
+  
+            <p>
+                Olá, tudo bem? 😄
+            </p>
+  
+            <p>
+                Sou estudante de Ciência da Computação pela Universidade Federal do Oeste do Pará,
+                e estou na área da tecnologia há 7 anos (desde 2015). Sou formada como Técnica em
+                Informática pelo IFPA.
+            </p>
+  
+            <p>
+                No momento, estou focada em dominar o front-end e suas ferramentas. Tenho conhecimento 
+                e experiência em diversas linguagens de programação, entre elas: Python, C/C++, Java,
+                Javascript e PHP.
+            </p>
+  
+            <p>
+                Durante a minha jornada acadêmica também me interessei pela Publicidade & Propaganda.
+                onde aprendi muito sobre design, redação publicitária e marketing. Também trabalhei na
+                área, mas apesar disso, decidi priorizar a computação.
+            </p>
+
+            <p>
+                Atualmente, estou em busca da minha primeira oportunidade como desenvolvedora. 👩🏽‍💻
+            </p>
+          </div>
+        </section>
+
+        <!--Formação Profissional-->
+        <section id="studies">
+          <div class="studies-header">
+            <h2 class="head-text">FORMAÇÃO<span class="underline underline-secondary"></span></h2>
+          </div>    
+        </section>
+
+        <!--Experiência Profissional-->
+        <section id="works">
+          <div class="works-header">
+            <h2 class="head-text">EXPERIÊNCIA<span class="underline underline-secondary"></span></h2>
+          </div> 
+          
+          <div class="timeline-container">
+            <div class="timeline-block timeline-block-right">
+              <div class="marker"></div>
+              <div class="timeline-content">
+                <h3 class="timeline-h3">Dez. 2020 - Atualmente</h3>
+                <span class="timeline-span">Social Media Freelancer</span>
+                <p class="timeline-p text-justify">Trabalhando com planejamento de marketing,
+                  agendamento de conteúdo, gerenciamento de redes sociais, branding, design, 
+                  e redação publicitária. 
+                </p>
+              </div>
+            </div>
+        
+            <div class="timeline-block timeline-block-left">
+              <div class="timeline-content">
+                <h3 class="timeline-h3">Fev. 2022 - Jun. 2022</h3>
+                <span class="timeline-span">Estudante Voluntária - UFOPA</span>
+                <p class="timeline-p text-justify">Estudante voluntária no Grupo 
+                  Interdisciplinar de Aplicação e Desenvolvimento de Tecnologias 
+                  Biomoleculares, trabalhando no desenvolvimento de um WebServer 
+                  com Python e SQL. Atuando com manipulação e análise de dados com 
+                  Pandas e na construção de algoritmo em Python para tratar FCs 
+                  (Features).</p>
+              </div>
+              <div class="marker"></div>
+            </div>
+        
+            <div class="timeline-block timeline-block-right">
+              <div class="marker"></div>
+              <div class="timeline-content">
+                <h3 class="timeline-h3">Jul. 2021 - Out. 2021</h3>
+                <span class="timeline-span">Bolsista - UFOPA</span>
+                <p class="timeline-p text-justify">Atuação como bolsista em projeto de 
+                  extensão no Centro de Documentação Histórica do Baixo Amazonas, 
+                  em projeto em parceria com a UCLA (Universidade da Califórnia), 
+                  com o objetivo de digitalizar documentos históricos da região de 
+                  Óbidos, Pará. Trabalhando com digitalização, edição de imagens
+                  e registro no banco de dados do Centro.</p>
+              </div>
+            </div>
+        
+            <div class="timeline-block timeline-block-left">
+              <div class="timeline-content">
+                <h3 class="timeline-h3">Jan. 2018 - Jun. 2018</h3>
+                <span class="timeline-span">Estagiária de Programação - IFPA</span>
+                <p class="timeline-p text-justify">Estágio curricular obrigatório 
+                  do curso Técnico em Informática, onde foram desenvolvidas 
+                  atividades de prototipação de um aplicativo móvel 
+                  utilizando Java e Android Studio.</p>
+              </div>
+              <div class="marker"></div>
+            </div>
+          </div>
+        </section>
+
+        <!--Portfólio-->
+        <section id="projects" class="project-container container">
+            <div class="projects container">
+                <h2 class="head-text">
+                    PORTFÓLIO <span class="underline underline-primary"></span>
+                </h2>
+            </div>
+    
+            <article class="project">
+
+            <!--Projeto 1 -->
+            <div href="" class="card">
+                <div class="project-info">
+                <div class="project-bio">
+                    <h3>Projeto 1</h3>
+                    <p>HTML, CSS & Javascript</p>
+                </div>
+    
+                <div class="project-link">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+                </div>
+                </div>
+            </div>
+    
+            <!--Projeto 2-->
+            <div href="" class="card">
+                <div class="project-info">
+                <div class="project-bio">
+                    <h3>Projeto 2</h3>
+                    <p>HTML, CSS & Javascript</p>
+                </div>
+    
+                <div class="project-link">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+                </div>
+                </div>
+            </div>
+    
+            <!--Projeto 3-->
+            <div href="" class="card">
+                <div class="project-info">
+                <div class="project-bio">
+                    <h3>Projeto 3</h3>
+                    <p>HTML, CSS & Javascript</p>
+                </div>
+    
+                <div class="project-link">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+                </div>
+                </div>
+            </div>
+    
+            <!--Projeto 4-->
+            <div href="" class="card">
+                <div class="project-info">
+                <div class="project-bio">
+                    <h3>Projeto 4</h3>
+                    <p>HTML, CSS & Javascript</p>
+                </div>
+    
+                <div class="project-link">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+                </div>
+                </div>
+            </div>
+    
+            <!--Projeto 5-->
+            <div href="" class="card">
+                <div class="project-info">
+                <div class="project-bio">
+                    <h3>Projeto 5</h3>
+                    <p>HTML, CSS & Javascript</p>
+                </div>
+    
+                <div class="project-link">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+                </div>
+                </div>
+            </div>
+    
+            <!--Projeto 6-->
+            <div href="" class="card">
+                <div class="project-info">
+                <div class="project-bio">
+                    <h3>Projeto 6</h3>
+                    <p>HTML, CSS & Javascript</p>
+                </div>
+    
+                <div class="project-link">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+                </div>
+                </div>
+            </div>
+            </article>
+        </section>
+
+        <!--Contato-->
+        <section id="contact" class="contact">
+            <div class="container">
+              <div class="form-header">
+                <h2 class="head-text">CONTATO<span class="underline underline-secondary"></span></h2>
+              </div>            
+
+              <!--Formulário-->
+              <div class="form-container">
+
+                <div class="container">
+                    <div class="form-text">
+                        <h2 class="text-secondary">Olá!</h2>
+                        <p>
+                        Fique a vontade para mandar uma mensagem e<br>
+                        entrar em contato comigo pelas redes sociais.
+                        </p>
+                        <p>📧 Email: <a href="mailto:gabriellebcastro@gmail.com">gabriellebcastro@gmail.com</a></p>
+                        <a href="https://wa.me/5593991388285?text=Ol%C3%A1%20Gabrielle%2C%20peguei%20seu%20contato%20no%20seu%20portf%C3%B3lio.%20Tudo%20bem%3F" target="_blank">
+                            <button class="btn">Whatsapp</button>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="form-page">
+                  <form action="thankyou.html" data-netlify="true" class="form">
+                    <div class="form-group group-bg">
+                      <label for="Name">Nome</label>
+                      <input
+                        type="text"
+                        id="Name"
+                        placeholder="Insira seu nome"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-group group-bg">
+                      <label for="Email">Email</label>
+                      <input
+                        type="email"
+                        id="Email"
+                        placeholder="Insira seu email"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-group group-bg">
+                      <label for="Subject">Assunto (Opcional)</label>
+                      <input type="text" id="Subject" placeholder="Assunto" />
+                    </div>
+
+                    <div class="form-group group-bg">
+                      <label for="Message">Mensagem</label>
+                      <textarea
+                        name="Message"
+                        id="Message"
+                        placeholder="Messagem"
+                      ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                      <button type="submit" value="submit" class="btn">Enviar</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+    </main>
 
     <!--Rodapé-->
-    <footer>
-        <div class="footer-botoes">
-            <a href="http://github.com/gabriellebcastro" target="_blank"><button class="btnfooter1"><img src="img/github.png"></button></a>
-            <a href="https://www.linkedin.com/in/gabriellebcastro/" target="_blank"><button class="btnfooter2"><img src="img/linkedin.png"></button></a>
-            <a href="https://www.behance.net/gabriellebcastro" target="_blank"><button class="btnfooter3"><img src="img/behance.png"></button></a>
+    <footer class="footer">
+        <div class="socialmediabtn">
+            <a href="http://github.com/gabriellebcastro" target="_blank"><button class="btnfooter"><img src="img/github2.png"></button></a>
+            <a href="https://www.linkedin.com/in/gabriellebcastro/" target="_blank"><button class="btnfooter"><img src="img/linkedin2.png"></button></a>
+            <a href="https://www.behance.net/gabriellebcastro" target="_blank"><button class="btnfooter"><img src="img/behance2.png"></button></a>
         </div>
         <p>Gabrielle Castro © Todos os direitos reservados.</p>
     </footer>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico" />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+    crossorigin="anonymous"
+    />
+    <script src="../js/main.js" async></script>
+    <title>Blog</title>
+</head>
+<body id="home">
+    <header id="blog">
+        <!--Barra de Navegação-->
+        <nav id="navbar-scroll" class="navbar">
+
+          <h1 class="logo">
+            <a href="#home"><img src="../img/logo_portfolio.png" alt="Logo"/></a>
+          </h1>
+
+          <div id="menu">
+            <ul class="nav-menu">
+              <li class="nav-items">
+                <a href="../index.html#about" class="nav-link"><i class="nav-icon fas fa-user"></i>Sobre mim</a>
+              </li>
+
+              <li class="nav-items">
+                <a href="../index.html#skills" class="nav-link"><i class="nav-icon fas fa-file"></i>Skills</a>
+              </li>
+
+              <li class="nav-items">
+                <a href="../index.html#works" class="nav-link"><i class="nav-icon fas fa-paperclip"></i>Experiência</a>
+              </li>
+
+              <li class="nav-items">
+                <a href="../index.html#projects" class="nav-link"><i class="nav-icon fas fa-code"></i>Portfólio</a>
+              </li>
+
+              <li class="nav-items">
+                <a href="../index.html#contact" class="nav-link"><i class="nav-icon fas fa-address-book"></i>Contato</a>
+              </li>
+
+              <li class="nav-items">
+                <a href="home.html" class="nav-link"><i class="nav-icon fas fa-rss"></i>Blog</a>
+              </li>
+  
+              <div class="theme-switch-wrapper">
+                <i class="nav-icon fas fa-sun"></i>
+                <label class="theme-switch" for="checkbox">
+                  <input type="checkbox" id="checkbox" />
+                  <div class="slider round"></div>
+                </label>
+                <i class="nav-icon fas fa-moon"></i>
+              </div>
+            </ul>
+
+        <!--Verificar-->
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </div>
+        </nav>   
+    </header>
+
+    <main class=containerhome>
+        <section id="artigos">
+
+            <article class="imghome translateY-4">
+                <a class="link-hover" target="_blank" href="posts/html.html">
+                <div class="conteudo">
+                    <div class="titulo">Construindo um site com HTML</div>
+                    <div class="autor">por <a href="">Gabrielle Castro</a> 1 dia atrás</div>
+                    <div class="tags">
+                        <span>HTML</span><span>Webdesign</span><span>Front-end</span>
+                        <span>Desenvolvimento Web</span>
+                    </div>
+                </div>
+                </a>
+            </article>
+
+            <article class="imghome translateY-4">
+                <a class="link-hover" target="_blank" href="posts/css.html">
+                <div class="conteudo">
+                    <div class="titulo">Estilizando com CSS</div>
+                    <div class="autor">por <a href="">Gabrielle Castro</a> 2 dias atrás</div>
+                    <div class="tags">
+                        <span>CSS</span><span>HTML</span><span>Webdesign</span>
+                        <span>Front-end</span>
+                    </div>
+                </div>
+                </a>
+            </article>
+
+            <article class="imghome translateY-4">
+                <a class="link-hover" target="_blank" href="posts/javascript.html">
+                <div class="conteudo">
+                    <div class="titulo">Implementando com JavaScript</div>
+                    <div class="autor">por <a href="">Gabrielle Castro</a> 2 dias atrás</div>
+                    <div class="tags">
+                        <span>JavaScript</span><span>Desenvolvimento Web</span><span>Front-end</span>
+                    </div>
+                </div>
+                </a>
+            </article>
+
+
+            <article class="imghome translateY-4  article-col-2">
+                <a class="link-hover" target="_blank" href="home.html">
+                <div class="conteudo">
+                    <div class="titulo">Contruindo aplicação web com React</div>
+                    <div class="autor">por <a href="">Gabrielle Castro</a> 3 dias atrás
+                    </div>
+                    <div class="tags">
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+                </a>
+            </article>
+
+
+
+            <article class="imghome translateY-4">
+                <a class="link-hover" target="_blank" href="home.html">
+                <div class="conteudo">
+                    <div class="titulo">Bootstrap: uma framework CSS</div>
+                    <div class="autor">por <a href="">Gabrielle Castro</a> 3 dias atrás</div>
+                    <div class="tags">
+                        <span>Bootstrap</span>
+                    </div>
+                </div>
+                </a>
+            </article>
+
+
+
+            <article class="imghome translateY-4">
+                <a class="link-hover" target="_blank" href="home.html">
+                <div class="conteudo">
+                    <div class="titulo">Sites dinâmicos com PHP</div>
+                    <div class="autor">por <a href="">Gabrielle Castro</a> 3 dias atrás
+                    </div>
+                    <div class="tags">
+                        <span>PHP</span>
+                    </div>
+                </div>
+                </a>
+            </article>
+        </section>
+    </main>
+
+    <!--Rodapé-->
+    <footer class="footer">
+      <div class="iconsfooter">
+        <a
+          href="http://github.com/gabriellebcastro"
+          title="Github"
+          target="_blank"
+          class="fab fa-github"
+        ></a>
+
+        <a
+          href="https://www.linkedin.com/in/gabriellebcastro/"
+          title="Linkedin"
+          target="_blank"
+          class="fab fa-linkedin"
+        ></a>
+
+        <a
+          href="https://www.behance.net/gabriellebcastro"
+          title="Codepen"
+          target="_blank"
+          class="fab fa-behance"
+        ></a>
+      </div>
+        <p>Gabrielle Castro © Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+

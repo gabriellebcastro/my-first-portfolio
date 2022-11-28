@@ -1,4 +1,4 @@
-//Hamburger menu
+/*=======================MOBILE MENU======================*/
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 hamburger.addEventListener("click", mobileMenu);
@@ -8,7 +8,6 @@ function mobileMenu(){
   navMenu.classList.toggle("active");
 }
 
-//Fechar Navbar - Link
 const navLink = document.querySelectorAll(".nav-link");
 
 navLink.forEach((n) => n.addEventListener("click", closeMenu));
@@ -56,7 +55,7 @@ if (currentTheme) {
   }
 }
 
-/*====================SKILLS====================*/
+/*=======================SKILLS=======================*/
 const skillsContent = document.getElementsByClassName("skills__content"),
   skillsHeader = document.querySelectorAll(".skills__header");
 
@@ -95,3 +94,26 @@ tabs.forEach((tab) => {
   });
 });
 
+/**===================ATIVAR LINK SECTION================*/
+const sections = document.querySelectorAll("section[id]");
+
+function scrollActive() {
+  const scrollY = window.pageYOffset;
+
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 80;
+    sectionId = current.getAttribute("id");
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector(".nav-menu a[href*=" + sectionId + "]")
+        .classList.add("active-link");
+    } else {
+      document
+        .querySelector(".nav-menu a[href*=" + sectionId + "]")
+        .classList.remove("active-link");
+    }
+  });
+}
+window.addEventListener("scroll", scrollActive);

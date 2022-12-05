@@ -117,3 +117,5 @@ function scrollActive() {
   });
 }
 window.addEventListener("scroll", scrollActive);
+
+/*====================LocalStorage========================= */

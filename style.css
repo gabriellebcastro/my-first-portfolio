@@ -253,7 +253,7 @@ body{
     font-style: normal;
     font-weight: normal;
     src: local("Proxima"),
-      url("/fonts/ProximaNova-Regular.otf") format("truetype");
+      url("./fonts/ProximaNova-Regular.otf") format("truetype");
     font-display: swap;
 }
   

@@ -13,7 +13,7 @@
     crossorigin="anonymous"
     />
     <script src="js/main.js" async></script>
-    <script type="text/javascript" src="js/funcoes.js" async></script>
+    <!--<script type="text/javascript" src="js/funcoes.js" async></script>-->
     <title>Gabrielle Castro</title>
 </head>
 <body id="home">
@@ -608,44 +608,52 @@
                 </div>
                 
                 <div class="form-page">
-                  <form action="" id="frmMensagem">
+                  <form action="" id="formContact">
                     <div class="form-group group-bg">
-                      <label for="Name">Nome</label>
+                      <label for="nome">Nome</label>
                       <input
                         type="text"
-                        id="Name"
+                        id="nome"
+                        name="nome"
                         placeholder="Insira seu nome"
                         required
                       />
                     </div>
 
                     <div class="form-group group-bg">
-                      <label for="Email">Email</label>
+                      <label for="email">Email</label>
                       <input
                         type="email"
-                        id="Email"
+                        id="email"
+                        name="email"
                         placeholder="Insira seu email"
                         required
                       />
                     </div>
 
                     <div class="form-group group-bg">
-                      <label for="Subject">Assunto (Opcional)</label>
-                      <input type="text" id="Subject" placeholder="Assunto" />
+                      <label for="assunto">Assunto (Opcional)</label>
+                      <input type="text" 
+                      id="assunto" 
+                      name="assunto"
+                      placeholder="Assunto" 
+                     />
                     </div>
 
                     <div class="form-group group-bg">
-                      <label for="Message">Mensagem</label>
+                      <label for="mensagem">Mensagem</label>
                       <textarea
-                        name="Message"
-                        id="Message"
+                        name="mensagem"
+                        id="mensagem"
+                        name="mensagem"
                         placeholder="Mensagem"
                       ></textarea>
                     </div>
 
                     <div class="form-group">
-                      <button type="submit" value="submit" class="btn">Enviar</button>
+                      <input type="submit" value="Enviar" class="btn">
                     </div>
+                    <a class="btn" id="mensagens-enviadas" href="mensagens.html">Acessar mensagens enviadas</a>
                   </form>
                 </div>
               </div>
@@ -679,6 +687,8 @@
       </div>
         <p>Gabrielle Castro © Todos os direitos reservados.</p>
     </footer>
+
+    <script src="js/localstorage.js"></script>
 </body>
 </html>
 

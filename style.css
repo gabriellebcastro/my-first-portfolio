@@ -1045,8 +1045,19 @@ h1, h2, h3, h4{
     transition: all 0.4s ease-in-out;
 }
 
-
-
+.msgs-button a{
+    font-family: "Proxima", sans-serif;
+    display: block;
+    color: var(--text-primary-color);
+    width: 600px;
+    padding: 1rem;
+    border: 1px solid var(--other-color);
+    outline: none;
+    transition: border 0.3s ease-in-out;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+}
 
 /*=======================Rodapé=======================*/
 footer{
@@ -1285,16 +1296,50 @@ article{
 }
 
 /*================Mensagens===============*/
-#msgs{
-    background-color: var(--bg-primary-color);
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.containermensagens{
+    width: 100%;
+    min-height: 100vh;
+    margin: auto;
+    background-color: var(--bg-secondary-color);
 }
 
+.head-text-mensagens{
+    text-align: center;
+    margin: 30px 0px;
+    font-size: 1.1rem;
+    transform: translateY(8rem);
+    font-family: "Montserrat", sans-serif;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.button__tabs{
+    display: flex;
+    justify-content: center;
+    transform: translateY(7rem);
+}
+
+.button__mensagens{
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    margin-right: 1rem;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.btnmsgs{
+    display: inline-block;
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: var(--button-bg);
+    position: relative;
+}
+
+.style-mensagens{
+    background-color: var(--secondary-color);
+}
 
 @media (max-width: 700px){
     .icons a,

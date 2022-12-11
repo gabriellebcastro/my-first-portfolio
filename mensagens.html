@@ -69,17 +69,26 @@
       </div>
     </nav>   
   </header>
-  
-  <section id="msgs">
 
-    <button onclick="excluirMensagens(); listarMensagens();" class="btn" title="Excluir"><i class="fa fa-trash"></i> Excluir </button>
-    <button onclick="listarMensagens()" class="btn" title="Listar"> Listar </button>
-    <div id="mensagens-enviadas">
-      
-    </div>
+  <main class="containermensagens">
+      <h2 class="head-text-mensagens">Mensagens Enviadas</h2>
 
-  </section>
-  
+      <div class="button__tabs">
+
+        <div class="button__mensagens">
+          <button onclick="excluirMensagens(); listarMensagens();" class="btnmsgs" id=excluirbutton title="Excluir"><i class="fa fa-trash"></i> Excluir </button>
+        </div>
+
+        <div class="button__mensagens">
+          <button onclick="listarMensagens()" class="btnmsgs" id="listarbutton" title="Listar"><i class="fa fa-list"></i> Listar </button>
+        </div>
+      </div>
+
+      <div id="mensagens-enviadas" style="text-align: center; justify-content: center; transform: translateY(9rem);">
+
+      </div>
+  </main>
+
   <footer class="footer">
     <div class="iconsfooter">
       <a

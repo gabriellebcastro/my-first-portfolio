@@ -28,8 +28,8 @@ function listarMensagens(){
 
     for (let i in mensagens) {
         let p = document.createElement('p');
-        p.innerHTML = "<strong>Nome: </strong>" + mensagens[i].nome + '<br> Email: ' + mensagens[i].email + 
-        '<br> Assunto: ' + mensagens[i].assunto + '<br> Mensagem enviada: ' + mensagens[i].mensagem;
+        p.innerHTML = "<strong>Nome: </strong>" + mensagens[i].nome + '<br> <strong>Email: </strong>' + mensagens[i].email + 
+        '<br> <strong> Assunto: </strong>' + mensagens[i].assunto + '<br> <strong> Mensagem enviada: </strong>' + mensagens[i].mensagem;
         msg.append(p);
     }
 }

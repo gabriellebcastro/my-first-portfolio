@@ -12,99 +12,101 @@
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
     crossorigin="anonymous"
     />
-    <script src="../js/main.js" async></script>
-    <title>Blog</title>
+    <script src="js/main.js" async></script>
+    <title>Mensagens</title>
 </head>
-<body id="home">
-    <header id="hero">
-        <!--Barra de Navegação-->
-        <nav id="navbar-scroll" class="navbar">
+<body>
+  <header id="blog">
+    <!--Barra de Navegação-->
+    <nav id="navbar-scroll" class="navbar">
 
-          <h1 class="logo">
-            <a href="index.html">Gabrielle</a>
-          </h1>
+      <h1 class="logo">
+        <a href="index.html">Gabrielle</a>
+      </h1>
 
-          <div id="menu">
-            <ul class="nav-menu">
-              <li class="nav-items">
-                <a href="index.html#about" class="nav-link"><i class="nav-icon fas fa-user"></i>Sobre mim</a>
-              </li>
+      <div id="menu">
+        <ul class="nav-menu">
+          <li class="nav-items">
+            <a href="index.html#about" class="nav-link"><i class="nav-icon fas fa-user"></i>Sobre mim</a>
+          </li>
 
-              <li class="nav-items">
-                <a href="index.html#skills" class="nav-link"><i class="nav-icon fas fa-file"></i>Skills</a>
-              </li>
+          <li class="nav-items">
+            <a href="index.html#skills" class="nav-link"><i class="nav-icon fas fa-file"></i>Skills</a>
+          </li>
 
-              <li class="nav-items">
-                <a href="index.html#works" class="nav-link"><i class="nav-icon fas fa-paperclip"></i>Experiência</a>
-              </li>
+          <li class="nav-items">
+            <a href="index.html#works" class="nav-link"><i class="nav-icon fas fa-paperclip"></i>Experiência</a>
+          </li>
 
-              <li class="nav-items">
-                <a href="index.html#projects" class="nav-link"><i class="nav-icon fas fa-code"></i>Portfólio</a>
-              </li>
+          <li class="nav-items">
+            <a href="index.html#projects" class="nav-link"><i class="nav-icon fas fa-code"></i>Portfólio</a>
+          </li>
 
-              <li class="nav-items">
-                <a href="index.html#contact" class="nav-link"><i class="nav-icon fas fa-address-book"></i>Contato</a>
-              </li>
+          <li class="nav-items">
+            <a href="index.html#contact" class="nav-link"><i class="nav-icon fas fa-address-book"></i>Contato</a>
+          </li>
 
-              <li class="nav-items">
-                <a href="/blog/home.html" class="nav-link"><i class="nav-icon fas fa-rss"></i>Blog</a>
-              </li>
-  
-              <div class="theme-switch-wrapper">
-                <i class="nav-icon fas fa-sun"></i>
-                <label class="theme-switch" for="checkbox">
-                  <input type="checkbox" id="checkbox" />
-                  <div class="slider round"></div>
-                </label>
-                <i class="nav-icon fas fa-moon"></i>
-              </div>
-            </ul>
+          <li class="nav-items">
+            <a href="/blog/home.html" class="nav-link"><i class="nav-icon fas fa-rss"></i>Blog</a>
+          </li>
 
-        <!--Verificar-->
-            <div class="hamburger">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-            </div>
+          <div class="theme-switch-wrapper">
+            <i class="nav-icon fas fa-sun"></i>
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox" />
+              <div class="slider round"></div>
+            </label>
+            <i class="nav-icon fas fa-moon"></i>
           </div>
-        </nav>   
-    </header>
+        </ul>
 
-    <main class=containerhome>
-        <div id="mensagens-enviadas"></div>
-            <button class="btn" onclick="exibirMensagens()">Exibir</button>
-            <button class="btn" onclick="excluirMensagens()">Excluir</button>
+    <!--Verificar-->
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
-    </main>
-
-    <!--Rodapé-->
-    <footer class="footer">
-      <div class="iconsfooter">
-        <a
-          href="http://github.com/gabriellebcastro"
-          title="Github"
-          target="_blank"
-          class="fab fa-github"
-        ></a>
-
-        <a
-          href="https://www.linkedin.com/in/gabriellebcastro/"
-          title="Linkedin"
-          target="_blank"
-          class="fab fa-linkedin"
-        ></a>
-
-        <a
-          href="https://www.behance.net/gabriellebcastro"
-          title="Codepen"
-          target="_blank"
-          class="fab fa-behance"
-        ></a>
       </div>
-        <p>Gabrielle Castro © Todos os direitos reservados.</p>
-    </footer>
+    </nav>   
+  </header>
+  
+  <section id="msgs">
 
-    <script src="js/localstorage.js"></script>
+    <button onclick="excluirMensagens(); listarMensagens();" class="btn" title="Excluir"><i class="fa fa-trash"></i> Excluir </button>
+    <button onclick="listarMensagens()" class="btn" title="Listar"> Listar </button>
+    <div id="mensagens-enviadas">
+      
+    </div>
+
+  </section>
+  
+  <footer class="footer">
+    <div class="iconsfooter">
+      <a
+        href="http://github.com/gabriellebcastro"
+        title="Github"
+        target="_blank"
+        class="fab fa-github"
+      ></a>
+
+      <a
+        href="https://www.linkedin.com/in/gabriellebcastro/"
+        title="Linkedin"
+        target="_blank"
+        class="fab fa-linkedin"
+      ></a>
+
+      <a
+        href="https://www.behance.net/gabriellebcastro"
+        title="Codepen"
+        target="_blank"
+        class="fab fa-behance"
+      ></a>
+    </div>
+      <p>Gabrielle Castro © Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/localstorage.js"></script>
 </body>
 </html>
 

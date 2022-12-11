@@ -1284,6 +1284,18 @@ article{
     cursor: pointer;
 }
 
+/*================Mensagens===============*/
+#msgs{
+    background-color: var(--bg-primary-color);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
 @media (max-width: 700px){
     .icons a,
     .icons .icon {

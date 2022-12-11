@@ -6,20 +6,26 @@ function adicionarMensagem(){
     const assunto = document.getElementById('assunto').value;
     const mensagem = document.getElementById('mensagem').value;
 
-    const mensagemAtual = {
-        "nome": nome,
-        "email": email,
-        "assunto": assunto,
-        "mensagem": mensagem
-    }
+    if ((nome == "") || (email == "") || (assunto == "") || (mensagem == "")){
+        alert("Preencha todos os campos!");
+        return false;     
+    } else {
 
-    mensagens.push(mensagemAtual);
-    localStorage.setItem("mensagens", JSON.stringify(mensagens));
-    
-    document.getElementById('nome').value = "";
-    document.getElementById('email').value = "";
-    document.getElementById('assunto').value = "";
-    document.getElementById('mensagem').value = "";
+        const mensagemAtual = {
+            "nome": nome,
+            "email": email,
+            "assunto": assunto,
+            "mensagem": mensagem
+        }
+
+        mensagens.push(mensagemAtual);
+        localStorage.setItem("mensagens", JSON.stringify(mensagens));
+
+        document.getElementById('nome').value = "";
+        document.getElementById('email').value = "";
+        document.getElementById('assunto').value = "";
+        document.getElementById('mensagem').value = "";
+    }
 }
 
 function listarMensagens(){
@@ -35,7 +41,13 @@ function listarMensagens(){
 }
 
 function excluirMensagens(){
-    mensagens = [];
-    localStorage.setItem("mensagens", JSON.stringify(mensagens));
+    var popUpExcluir = confirm("Deseja resetar o localstorage?");
+    if (popUpExcluir == true) {
+        mensagens = [];
+        localStorage.setItem("mensagens", JSON.stringify(mensagens));  
+    }
+    else{
+        alert("Você desistiu de resetar o localstorage! :)");
+    }
     //localStorage.clear();
 }
